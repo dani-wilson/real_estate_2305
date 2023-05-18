@@ -1,5 +1,3 @@
-require 'pry'
-
 class House
     attr_reader :price, :address, :rooms
 
@@ -28,13 +26,17 @@ class House
 
     def rooms_from_category(category)
         @rooms.find_all do |room|
-            category.to_s
+            room.category == category
         end
     end
 
     def area
-        
+        @rooms.sum do |room|
+            room.area
+        end
     end
 
-
+    def details
+        {"price" => price, "address" => address}
+    end
 end
