@@ -30,4 +30,8 @@ RSpec.describe House do
         expect(house.rooms.length).to eq(2)
     end
 
+    it 'is above market average?' do
+        expect(house.above_market_average?).to eq(false)
+    end
+
 end
