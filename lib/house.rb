@@ -26,5 +26,11 @@ class House
         end
     end
 
+    def rooms_from_category(category)
+        @rooms.find_all do |room|
+            category.to_s
+        end
+    end
+
 
 end
