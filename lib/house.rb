@@ -32,5 +32,9 @@ class House
         end
     end
 
+    def area
+        
+    end
+
 
 end
